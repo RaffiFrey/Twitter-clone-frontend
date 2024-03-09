@@ -3,6 +3,9 @@ import {Grid} from "@mui/material";
 import Navigation from "../navigation/Navigation";
 import HomeSection from "../home-section/HomeSection";
 import RightPart from "../right-part/RightPart";
+import {Route, Routes} from "react-router-dom";
+import Profile from '../profile/Profile'
+import TweetDetails from "../tweet-details/TweetDetails";
 
 export default function HomePage() {
     return (
@@ -11,7 +14,12 @@ export default function HomePage() {
                 <Navigation />
             </Grid>
             <Grid item xs={12} lg={6} className={'px-5 lg:px-9 hidden lg:block w-full relative'}>
-                <HomeSection />
+                <Routes>
+                    <Route path={'/'} element={<HomeSection />}> </Route>
+                    <Route path={'/home'} element={<HomeSection />}> </Route>
+                    <Route path={`/profile/:id`} element={<Profile />}> </Route>
+                    <Route path={`/tweet/:id`} element={<TweetDetails />}> </Route>
+                </Routes>
             </Grid>
             <Grid item xs={0} lg={3} className={'hidden lg:block w-full relative'}>
                 <RightPart/>

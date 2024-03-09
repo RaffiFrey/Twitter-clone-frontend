@@ -45,7 +45,7 @@ export default function TweetCard() {
             </div>
             */}
             <div className={'flex space-x-5'}>
-                <Avatar onClick={() => navigate(`/profile/${6}`)}
+                <Avatar onClick={() => navigate(`/profile/${5}`)}
                         className={'cursor-pointer'}
                         alt={'username'}
                         src={'https://lumiere-a.akamaihd.net/v1/images/clone-wars-chronological-order-ahsoka_tall_6768d628.jpeg?region=336,0,864,864'}
@@ -83,9 +83,9 @@ export default function TweetCard() {
                         </div>
                     </div>
                     <div className={'mt-2'}>
-                        <div className={'cursor-pointer'}>
+                        <div onClick={()=>navigate(`/tweet/${3}`)} className={'cursor-pointer'}>
                             <p className={'mb-2 p-0'}>even though i don't like all, the franchise is still nice</p>
-                            <img className={'w-[28rem] border border-gray-400 p-5 rounded-md'}
+                            <img className={'w-[100%] w-full border border-gray-400 p-5 rounded-md'}
                                  src={'https://i.redd.it/bckhazhsx8vb1.jpg'} alt={''}/>
                         </div>
                         <div className={'py-5 flex flex-wrap justify-between items-center'}>

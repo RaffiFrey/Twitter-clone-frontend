@@ -11,16 +11,23 @@ import TabContext from '@mui/lab/TabContext';
 import TabList from '@mui/lab/TabList';
 import TabPanel from '@mui/lab/TabPanel';
 import TweetCard from "../home-section/TweetCard";
+import ProfileModal from "./ProfileModal";
 
 export default function Profile() {
     const [tabValue, setTabValue] = useState('1');
     const navigate=useNavigate();
-    function handleBack() {
-        navigate(-1);
+    const [open, setOpen] = useState(false)
+
+    function handleClose() {
+        setOpen(false)
     }
 
     function handleOpenProfileModel() {
-        console.log('handle open profile model');
+        setOpen(true);
+    }
+
+    function handleBack() {
+        navigate(-1);
     }
 
     function handleFollowUser() {
@@ -123,6 +130,9 @@ export default function Profile() {
                         <TabPanel value="4">Likes</TabPanel>
                     </TabContext>
                 </Box>
+            </section>
+            <section>
+                <ProfileModal open={open} handleClose={handleClose} />
             </section>
         </div>
     );

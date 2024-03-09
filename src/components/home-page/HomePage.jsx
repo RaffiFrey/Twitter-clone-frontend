@@ -2,7 +2,7 @@ import React from 'react';
 import {Grid} from "@mui/material";
 import Navigation from "../navigation/Navigation";
 import HomeSection from "../home-section/HomeSection";
-import RightPart from "../RightPart/RightPart";
+import RightPart from "../right-part/RightPart";
 
 export default function HomePage() {
     return (
